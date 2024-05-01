@@ -1,0 +1,179 @@
+/* ------------------  Global Styling ------------------ */
+
+/* Google Fonts'tan Roboto fontunu içeri alır */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+/* Kök (root) değişkenleri */
+:root {
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Gölgelendirme */
+}
+
+/* Sayfa stil ayarları */
+body {
+  background-color: rgb(0, 0, 0); /* Arka plan rengi */
+  font-family: "Roboto", sans-serif; /* Yazı tipi */
+}
+
+/* ------------------  Register Page ------------------ */
+
+/* Kayıt sayfası stil tanımları */
+#form-container {
+  width: 400px; /* Genişlik */
+  box-shadow: var(--shadow); /* Gölgelendirme */
+  background-color: #fff; /* Arka plan rengi */
+  padding: 30px; /* Dolgu */
+  border-radius: 30px; /* Köşe yuvarlatma */
+  position: fixed; /* Sabit pozisyon */
+  top: 50%; /* Üst kenarın konumu */
+  left: 50%; /* Sol kenarın konumu */
+  transform: translate(-50%, -50%); /* Konum düzenleme */
+}
+
+#logo {
+  display: block;
+  width: 150px;
+  margin: 0 auto; /* Merkezi hizalama */
+}
+
+#welcome-message {
+  text-align: center;
+  margin-bottom: 20px; /* Alt boşluk */
+}
+
+#welcome-message h1 {
+  font-size: 36px; /* Başlık boyutu */
+}
+
+#welcome-message p {
+  font-size: 16px; /* Paragraf boyutu */
+  color: rgb(97, 98, 105); /* Paragraf rengi */
+  font-weight: 300; /* Yazı kalınlığı */
+}
+
+.form-field {
+  margin-bottom: 20px; /* Alt boşluk */
+}
+
+.form-field label {
+  font-size: 20px; /* Etiket boyutu */
+  line-height: 1.7em; /* Satır yüksekliği */
+}
+
+.form-field input {
+  width: 100%; /* Genişlik */
+  border: 2px solid rgba(198, 202, 219, 1); /* Kenarlık rengi ve kalınlığı */
+  border-radius: 5px; /* Köşe yuvarlatma */
+  padding: 10px; /* Dolgu */
+  font-size: 16px; /* Yazı boyutu */
+  box-sizing: border-box; /* Kutunun içeriğini dahil etme */
+}
+
+.form-field input[type="submit"] {
+  background-color: rgb(27, 32, 54); /* Arka plan rengi */
+  border: none; /* Kenarlık yok */
+  color: #fff; /* Yazı rengi */
+}
+
+@media screen and (max-width: 450px) {
+  #form-container {
+    width: 95%; /* Genişlik */
+  }
+
+  #welcome-message h1 {
+    font-size: 24px; /* Başlık boyutu */
+  }
+}
+
+/* ----------------- Room Styling ------------------*/
+
+/* Oda sayfası stil tanımları */
+#room-name-wrapper {
+  text-align: center;
+  font-size: 18px; /* Başlık boyutu */
+}
+
+#video-streams {
+  display: flex; /* Esnek kutu */
+  flex-wrap: wrap; /* Sarmalama */
+  height: 85vh; /* Yükseklik */
+  width: 95%; /* Genişlik */
+  margin: 0 auto; /* Merkezi hizalama */
+}
+
+.video-container {
+  flex-basis: 500px; /* Esneklik */
+  flex-grow: 1; /* Büyüme */
+  max-height: 100%; /* Maksimum yükseklik */
+  min-height: 350px; /* Minimum yükseklik */
+  border: 10px solid rgb(75, 93, 172); /* Kenarlık rengi ve kalınlığı */
+  border-radius: 30px; /* Köşe yuvarlatma */
+  margin: 2px; /* Kenar boşluğu */
+  background-color: rgb(0, 0, 0); /* Arka plan rengi */
+  position: relative; /* Göreceli pozisyon */
+}
+
+.video-player {
+  height: 100%; /* Yükseklik */
+  width: 100%; /* Genişlik */
+}
+
+.video-player > * {
+  border-radius: 20px; /* Köşe yuvarlatma */
+}
+
+.username-wrapper {
+  position: absolute; /* Mutlak pozisyon */
+  top: 10px; /* Üst kenarın konumu */
+  left: 10px; /* Sol kenarın konumu */
+  z-index: 9999; /* Yığınlama sırası */
+  background-color: rgba(0, 0, 0, 0.3); /* Arka plan rengi ve opaklık */
+  width: fit-content; /* İçeriği sığdırma */
+  padding: 10px; /* Dolgu */
+  border-radius: 10px; /* Köşe yuvarlatma */
+  color: #fff; /* Yazı rengi */
+  font-size: 18px; /* Yazı boyutu */
+}
+
+@media screen and (max-width: 1650px) {
+  .video-container {
+    flex-basis: 300px; /* Esneklik */
+    min-height: 200px; /* Minimum yükseklik */
+  }
+}
+
+/* ----------------- Room Styling | Controls ------------------*/
+
+/* Kontrol düğmelerinin stil tanımları */
+#controls-wrapper {
+  display: flex; /* Esnek kutu */
+  width: 100%; /* Genişlik */
+  justify-content: center; /* İçeriği yatayda hizalama */
+  column-gap: 1em; /* Sütunlar arası boşluk */
+  position: fixed; /* Sabit pozisyon */
+  bottom: 30px; /* Alt kenarın konumu */
+}
+
+.control-icon {
+  height: 20px; /* Yükseklik */
+  width: 20px; /* Genişlik */
+  box-shadow: var(--shaddow); /* Gölgelendirme */
+  background-color: #fff; /* Arka plan rengi */
+  cursor: pointer; /* İmleç türü */
+  padding: 10px; /* Dolgu */
+  border-radius: 5px; /* Köşe yuvarlatma */
+}
+
+#leave-btn {
+  background-color: rgb(255, 80, 80, 1); /* Arka plan rengi */
+  transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+#leave-btn:hover {
+  background-color: rgba(
+    255,
+    0,
+    0,
+    0.8
+  ); /* Butonun üzerine gelince rengi değiştir */
+}
